@@ -7,14 +7,15 @@
 
      <!-- SEO -->
      <meta name="description"
-          content="Silva & Associados - Escritório de advocacia especializado em direito civil, trabalhista e empresarial. Excelência jurídica em Belo Horizonte." />
+          content="Silva & Associados - Escritório de advocacia de excelência em Belo Horizonte. Especialistas em direito civil, trabalhista e empresarial com mais de 20 anos de experiência." />
      <meta name="keywords"
-          content="advogado, advocacia, direito civil, direito trabalhista, direito empresarial, escritório advocacia belo horizonte, advogado bh" />
+          content="advogado belo horizonte, advocacia bh, direito civil, direito trabalhista, direito empresarial, escritório advocacia, advogado trabalhista bh, advogado empresarial" />
      <meta name="author" content="Silva & Associados" />
 
      <!-- Open Graph -->
      <meta property="og:title" content="Silva & Associados - Advocacia de Excelência" />
-     <meta property="og:description" content="Soluções jurídicas personalizadas com mais de 20 anos de experiência" />
+     <meta property="og:description"
+          content="Soluções jurídicas estratégicas com mais de 20 anos de experiência. Atendimento personalizado e resultados comprovados." />
      <meta property="og:type" content="website" />
      <meta property="og:url" content="https://silvaassociados.com.br" />
      <meta property="og:image" content="https://silvaassociados.com.br/assets/img/og-image.jpg" />
@@ -22,9 +23,9 @@
      <!-- Twitter Card -->
      <meta name="twitter:card" content="summary_large_image" />
      <meta name="twitter:title" content="Silva & Associados - Advocacia de Excelência" />
-     <meta name="twitter:description" content="Soluções jurídicas personalizadas com mais de 20 anos de experiência" />
+     <meta name="twitter:description" content="Soluções jurídicas estratégicas com mais de 20 anos de experiência" />
 
-     <title>Silva & Associados - Escritório de Advocacia</title>
+     <title>Silva & Associados - Advocacia de Excelência | Belo Horizonte</title>
      <link rel="icon" href="./assets/icons/orangebalance.svg" type="image/svg+xml" />
 
      <!-- Preconnect -->
@@ -32,219 +33,313 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
      <link rel="preconnect" href="https://unpkg.com" />
 
-     <!-- Roboto Mono Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+     <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet" />
 
      <!-- AOS Animations -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-     <!-- Alpine.js -->
-     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-     <!-- CSS customizado -->
+     <!-- CSS -->
      <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.scrollY > 300)">
+<body>
 
      <!-- Header / Navbar -->
-     <header>
-          <nav>
-               <img src="./assets/icons/orangebalance.svg" alt="Logo Silva & Associados" />
-               <div class="page-links">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#areas">Áreas de Atuação</a>
-                    <a href="#contato">Contato</a>
+     <header id="header">
+          <nav class="nav-container">
+               <div class="nav-brand">
+                    <img src="./assets/icons/orangebalance.svg" alt="Logo Silva & Associados" />
+                    <span class="brand-text">Silva & Associados</span>
                </div>
+               <div class="nav-links">
+                    <a href="#sobre" class="nav-link">Sobre Nós</a>
+                    <a href="#areas" class="nav-link">Áreas de Atuação</a>
+                    <a href="#contato" class="nav-link cta-nav">Fale Conosco</a>
+               </div>
+               <button class="mobile-menu-toggle" aria-label="Menu" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </button>
           </nav>
      </header>
 
      <!-- Main Content -->
      <main id="content">
 
-          <!-- HERO / SOBRE -->
-          <section id="sobre" data-aos="fade-up">
-               <img src="./assets/img/img01.avif" class="section-avatar" alt="Silva & Associados" loading="lazy">
-               <h1>SILVA & ASSOCIADOS</h1>
+          <!-- HERO SECTION -->
+          <section id="hero" class="hero-section" data-aos="fade-up">
+               <div class="hero-content">
+                    <h1 class="hero-title">Advocacia que Transforma <span class="highlight">Desafios</span> em Soluções
+                    </h1>
+                    <p class="hero-subtitle">
+                         Há mais de 20 anos construindo histórias de sucesso através de estratégias jurídicas
+                         personalizadas e eficazes
+                    </p>
+                    <div class="hero-cta">
+                         <a href="#contato" class="btn-primary">Agendar Consulta Gratuita</a>
+                         <a href="#areas" class="btn-secondary">Conheça Nossas Áreas</a>
+                    </div>
+               </div>
+               <div class="hero-image">
+                    <img src="./assets/img/img01.avif" alt="Silva & Associados - Escritório de Advocacia"
+                         loading="eager">
+               </div>
+          </section>
 
-               <p>
-                    Somos um <strong>escritório de advocacia</strong> com mais de 20 anos de experiência,
-                    especializado em <strong>direito civil, trabalhista e empresarial</strong>.
-               </p>
+          <!-- SOBRE NÓS -->
+          <section id="sobre" class="about-section" data-aos="fade-up">
+               <div class="section-header">
+                    <span class="section-tag">Nossa Essência</span>
+                    <h2 class="section-title">Excelência Jurídica com Propósito</h2>
+               </div>
 
-               <p>
-                    Nossa missão é oferecer soluções jurídicas personalizadas e eficientes,
-                    sempre priorizando os interesses de nossos clientes com ética, transparência
-                    e excelência técnica.
-               </p>
+               <div class="about-content">
+                    <div class="about-text">
+                         <p class="lead-text">
+                              Somos mais que um escritório de advocacia. Somos parceiros estratégicos que compreendem
+                              profundamente os desafios de nossos clientes.
+                         </p>
+                         <p>
+                              Com uma trajetória sólida de <strong>mais de duas décadas</strong>, consolidamos nossa
+                              expertise em <strong>direito civil, trabalhista e empresarial</strong>, oferecendo
+                              soluções sob medida que combinam conhecimento técnico aprofundado com visão estratégica de
+                              negócios.
+                         </p>
+                         <p>
+                              Nossa abordagem vai além da simples prestação de serviços jurídicos: construímos
+                              relacionamentos duradouros baseados em confiança, transparência e resultados concretos.
+                              Cada caso é tratado com dedicação exclusiva, sempre priorizando seus interesses e
+                              objetivos.
+                         </p>
+                    </div>
 
-               <p>
-                    <strong>Atendimento:</strong> Segunda a Sexta, das 08:00 às 18:00 | Atendimento emergencial 24h
-               </p>
+                    <div class="about-stats">
+                         <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                              <div class="stat-number">20+</div>
+                              <div class="stat-label">Anos de Experiência</div>
+                         </div>
+                         <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                              <div class="stat-number">500+</div>
+                              <div class="stat-label">Casos de Sucesso</div>
+                         </div>
+                         <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                              <div class="stat-number">98%</div>
+                              <div class="stat-label">Clientes Satisfeitos</div>
+                         </div>
+                         <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                              <div class="stat-number">24/7</div>
+                              <div class="stat-label">Atendimento Emergencial</div>
+                         </div>
+                    </div>
+               </div>
 
-               <div class="tech-badges">
-                    <span class="badge">20+ Anos de Experiência</span>
-                    <span class="badge">500+ Casos Resolvidos</span>
-                    <span class="badge">98% Satisfação</span>
-                    <span class="badge">Atendimento Personalizado</span>
+               <div class="office-hours">
+                    <img src="./assets/icons/check.svg" class="icon" alt="">
+                    <span><strong>Horário de Atendimento:</strong> Segunda a Sexta, 08h às 18h | Atendimento emergencial
+                         disponível 24 horas</span>
                </div>
           </section>
 
           <!-- ÁREAS DE ATUAÇÃO -->
-          <section id="areas" data-aos="fade-up" data-aos-delay="200">
-               <img src="./assets/img/img02.avif" class="section-avatar" alt="Áreas de Atuação" loading="lazy">
-
-               <h1>ÁREAS DE ATUAÇÃO</h1>
-
-               <div x-data="{ activeCategory: 1 }" class="accordion">
-
-                    <!-- Categoria 1: Direito Civil -->
-                    <div class="accordion-item">
-                         <button @click="activeCategory = activeCategory === 1 ? null : 1" class="accordion-header">
-                              <span>
-                                   <img src="./assets/icons/blackbalance.svg" class="icon" alt="">
-                                   Direito Civil
-                              </span>
-                              <span x-text="activeCategory === 1 ? '−' : '+'"></span>
-                         </button>
-                         <div x-show="activeCategory === 1" x-collapse class="accordion-content">
-                              <p>
-                                   Atuamos em todas as áreas do direito civil, oferecendo assessoria completa
-                                   para questões patrimoniais, familiares e contratuais.
-                              </p>
-
-                              <p class="content-title">Nossos Serviços:</p>
-                              <ul>
-                                   <li><strong>Direito de Família</strong> - Divórcio, guarda, pensão alimentícia</li>
-                                   <li><strong>Direito Sucessório</strong> - Inventários, testamentos, partilhas</li>
-                                   <li><strong>Direito Imobiliário</strong> - Compra, venda, locação, usucapião</li>
-                                   <li><strong>Contratos</strong> - Elaboração e revisão de contratos diversos</li>
-                                   <li><strong>Responsabilidade Civil</strong> - Indenizações e reparações</li>
-                                   <li><strong>Direito do Consumidor</strong> - Defesa de direitos e cobranças</li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <!-- Categoria 2: Direito Trabalhista -->
-                    <div class="accordion-item">
-                         <button @click="activeCategory = activeCategory === 2 ? null : 2" class="accordion-header">
-                              <span>
-                                   <img src="./assets/icons/blackbalance.svg" class="icon" alt="">
-                                   Direito Trabalhista
-                              </span>
-                              <span x-text="activeCategory === 2 ? '−' : '+'"></span>
-                         </button>
-                         <div x-show="activeCategory === 2" x-collapse class="accordion-content">
-                              <p>
-                                   Defesa dos direitos de trabalhadores e assessoria jurídica para empresas
-                                   em questões trabalhistas e previdenciárias.
-                              </p>
-
-                              <p class="content-title">Nossos Serviços:</p>
-                              <ul>
-                                   <li><strong>Reclamações Trabalhistas</strong> - Defesa e acompanhamento processual
-                                   </li>
-                                   <li><strong>Rescisões Contratuais</strong> - Análise de verbas e direitos</li>
-                                   <li><strong>Acidentes de Trabalho</strong> - Indenizações e benefícios</li>
-                                   <li><strong>Assédio Moral e Sexual</strong> - Proteção e reparação</li>
-                                   <li><strong>Consultoria Empresarial</strong> - Prevenção de passivos trabalhistas
-                                   </li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <!-- Categoria 3: Direito Empresarial -->
-                    <div class="accordion-item">
-                         <button @click="activeCategory = activeCategory === 3 ? null : 3" class="accordion-header">
-                              <span>
-                                   <img src="./assets/icons/blackbalance.svg" class="icon" alt="">
-                                   Direito Empresarial
-                              </span>
-                              <span x-text="activeCategory === 3 ? '−' : '+'"></span>
-                         </button>
-                         <div x-show="activeCategory === 3" x-collapse class="accordion-content">
-                              <p>
-                                   Assessoria jurídica completa para empresas de todos os portes,
-                                   desde a constituição até questões societárias complexas.
-                              </p>
-
-                              <p class="content-title">Nossos Serviços:</p>
-                              <ul>
-                                   <li><strong>Constituição de Empresas</strong> - Abertura e regularização</li>
-                                   <li><strong>Contratos Empresariais</strong> - Elaboração e revisão</li>
-                                   <li><strong>Recuperação Judicial</strong> - Reestruturação empresarial</li>
-                                   <li><strong>Direito Societário</strong> - Questões entre sócios</li>
-                                   <li><strong>Propriedade Intelectual</strong> - Marcas e patentes</li>
-                                   <li><strong>Compliance e LGPD</strong> - Adequação normativa</li>
-                              </ul>
-                         </div>
-                    </div>
+          <section id="areas" class="areas-section" data-aos="fade-up">
+               <div class="section-header centered">
+                    <span class="section-tag">Especialidades</span>
+                    <h2 class="section-title">Áreas de Atuação</h2>
+                    <p class="section-subtitle">Expertise jurídica abrangente para atender todas as suas necessidades
+                         legais</p>
                </div>
 
-               <div class="cta-container dual">
+               <div class="areas-image">
+                    <img src="./assets/img/img02.avif" alt="Áreas de Atuação - Silva & Associados" loading="lazy">
+               </div>
+
+               <div class="areas-grid">
+
+                    <!-- Direito Civil -->
+                    <div class="area-card" data-aos="fade-up" data-aos-delay="100">
+                         <div class="area-header">
+                              <img src="./assets/icons/blackbalance.svg" class="area-icon" alt="">
+                              <h3 class="area-title">Direito Civil</h3>
+                         </div>
+                         <p class="area-description">
+                              Assessoria jurídica completa para questões patrimoniais, familiares e contratuais, com
+                              foco em soluções práticas e eficientes.
+                         </p>
+                         <button class="area-toggle" data-area="civil">
+                              <span class="toggle-text">Ver especialidades</span>
+                              <span class="toggle-icon">+</span>
+                         </button>
+                         <div class="area-content" id="civil-content">
+                              <ul class="services-list">
+                                   <li><strong>Direito de Família</strong> — Divórcio consensual e litigioso, guarda
+                                        compartilhada, pensão alimentícia e união estável</li>
+                                   <li><strong>Direito Sucessório</strong> — Inventários judiciais e extrajudiciais,
+                                        testamentos, planejamento sucessório e partilhas complexas</li>
+                                   <li><strong>Direito Imobiliário</strong> — Contratos de compra e venda, locação,
+                                        usucapião, regularização de imóveis</li>
+                                   <li><strong>Contratos Civis</strong> — Elaboração, revisão e negociação de contratos
+                                        diversos</li>
+                                   <li><strong>Responsabilidade Civil</strong> — Ações de indenização por danos
+                                        materiais e morais</li>
+                                   <li><strong>Direito do Consumidor</strong> — Defesa dos direitos do consumidor e
+                                        resolução de conflitos</li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <!-- Direito Trabalhista -->
+                    <div class="area-card" data-aos="fade-up" data-aos-delay="200">
+                         <div class="area-header">
+                              <img src="./assets/icons/blackbalance.svg" class="area-icon" alt="">
+                              <h3 class="area-title">Direito Trabalhista</h3>
+                         </div>
+                         <p class="area-description">
+                              Defesa estratégica dos direitos trabalhistas e assessoria preventiva para empresas,
+                              minimizando riscos e maximizando resultados.
+                         </p>
+                         <button class="area-toggle" data-area="trabalhista">
+                              <span class="toggle-text">Ver especialidades</span>
+                              <span class="toggle-icon">+</span>
+                         </button>
+                         <div class="area-content" id="trabalhista-content">
+                              <ul class="services-list">
+                                   <li><strong>Reclamações Trabalhistas</strong> — Representação completa em processos
+                                        trabalhistas com estratégia personalizada</li>
+                                   <li><strong>Rescisões Contratuais</strong> — Análise detalhada de verbas rescisórias
+                                        e defesa de direitos</li>
+                                   <li><strong>Acidentes de Trabalho</strong> — Busca de indenizações, auxílios e
+                                        estabilidade acidentária</li>
+                                   <li><strong>Assédio Moral e Sexual</strong> — Proteção jurídica e busca de reparação
+                                        integral</li>
+                                   <li><strong>Consultoria Empresarial</strong> — Prevenção de passivos trabalhistas e
+                                        compliance trabalhista</li>
+                                   <li><strong>Negociações Coletivas</strong> — Apoio em acordos e convenções coletivas
+                                        de trabalho</li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <!-- Direito Empresarial -->
+                    <div class="area-card" data-aos="fade-up" data-aos-delay="300">
+                         <div class="area-header">
+                              <img src="./assets/icons/blackbalance.svg" class="area-icon" alt="">
+                              <h3 class="area-title">Direito Empresarial</h3>
+                         </div>
+                         <p class="area-description">
+                              Soluções jurídicas empresariais integradas, desde a constituição até questões societárias
+                              complexas e reestruturações.
+                         </p>
+                         <button class="area-toggle" data-area="empresarial">
+                              <span class="toggle-text">Ver especialidades</span>
+                              <span class="toggle-icon">+</span>
+                         </button>
+                         <div class="area-content" id="empresarial-content">
+                              <ul class="services-list">
+                                   <li><strong>Constituição de Empresas</strong> — Abertura, regularização e escolha da
+                                        estrutura societária ideal</li>
+                                   <li><strong>Contratos Empresariais</strong> — Elaboração e revisão de contratos
+                                        comerciais complexos</li>
+                                   <li><strong>Recuperação Judicial</strong> — Reestruturação empresarial e negociação
+                                        com credores</li>
+                                   <li><strong>Direito Societário</strong> — Resolução de conflitos societários e
+                                        governança corporativa</li>
+                                   <li><strong>Propriedade Intelectual</strong> — Registro e proteção de marcas,
+                                        patentes e direitos autorais</li>
+                                   <li><strong>Compliance e LGPD</strong> — Adequação às normas regulatórias e proteção
+                                        de dados</li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+
+               <div class="cta-container">
                     <a href="#contato" class="btn-primary">
                          <img src="./assets/icons/check.svg" class="icon" alt="">
-                         Agendar Consulta
+                         Solicite sua Consulta Jurídica
                     </a>
                </div>
           </section>
 
           <!-- CONTATO -->
-          <section id="contato" data-aos="fade-up">
-               <img src="./assets/img/img03.avif" class="section-avatar" alt="Contato" loading="lazy">
-               <h1>CONTATO & LOCALIZAÇÃO</h1>
+          <section id="contato" class="contact-section" data-aos="fade-up">
+               <div class="section-header centered">
+                    <span class="section-tag">Fale Conosco</span>
+                    <h2 class="section-title">Estamos Prontos para Ajudar</h2>
+                    <p class="section-subtitle">
+                         Entre em contato e agende uma consulta personalizada. Nossa equipe de especialistas está pronta
+                         para encontrar a melhor solução para o seu caso.
+                    </p>
+               </div>
 
-               <p class="form-intro">
-                    Entre em contato para agendar uma consulta ou esclarecer dúvidas.
-                    Nossa equipe está pronta para atender você com excelência e profissionalismo.
-               </p>
+               <div class="contact-image">
+                    <img src="./assets/img/img03.avif" alt="Contato Silva & Associados" loading="lazy">
+               </div>
 
-               <div class="social-links">
+               <div class="contact-grid">
 
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/553132224455" target="_blank" rel="noopener noreferrer" class="social-link">
-                         <img src="./assets/icons/whatsapp.svg" class="icon" alt="WhatsApp">
-                         <span>(31) 3222-4455</span>
+                    <a href="https://wa.me/553132224455" target="_blank" rel="noopener noreferrer"
+                         class="contact-card whatsapp">
+                         <img src="./assets/icons/whatsapp.svg" class="contact-icon" alt="WhatsApp">
+                         <div class="contact-info">
+                              <span class="contact-label">WhatsApp</span>
+                              <span class="contact-value">(31) 3222-4455</span>
+                              <span class="contact-desc">Atendimento rápido e direto</span>
+                         </div>
                     </a>
 
-                    <!-- Email -->
-                    <a href="mailto:contato@silvaassociados.com.br" class="social-link">
-                         <img src="./assets/icons/mail.svg" class="icon" alt="Email">
-                         <span>contato@silvaassociados.com.br</span>
+                    <a href="mailto:contato@silvaassociados.com.br" class="contact-card email">
+                         <img src="./assets/icons/mail.svg" class="contact-icon" alt="Email">
+                         <div class="contact-info">
+                              <span class="contact-label">Email</span>
+                              <span class="contact-value">contato@silvaassociados.com.br</span>
+                              <span class="contact-desc">Resposta em até 24h</span>
+                         </div>
                     </a>
 
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/silvaassociados/" target="_blank" rel="noopener noreferrer"
-                         class="social-link">
-                         <img src="./assets/icons/instagram.svg" class="icon" alt="Instagram">
-                         <span>@silvaassociados</span>
+                         class="contact-card instagram">
+                         <img src="./assets/icons/instagram.svg" class="contact-icon" alt="Instagram">
+                         <div class="contact-info">
+                              <span class="contact-label">Instagram</span>
+                              <span class="contact-value">@silvaassociados</span>
+                              <span class="contact-desc">Conteúdo jurídico diário</span>
+                         </div>
                     </a>
 
-                    <!-- Endereço -->
-                    <div class="social-link" style="cursor: default; opacity: 0.9;">
-                         <img src="./assets/icons/adress.svg" class="icon" alt="Endereço">
-                         <span>Av. Afonso Pena, 1500 - Savassi, BH - MG</span>
+                    <div class="contact-card address">
+                         <img src="./assets/icons/adress.svg" class="contact-icon" alt="Endereço">
+                         <div class="contact-info">
+                              <span class="contact-label">Nosso Escritório</span>
+                              <span class="contact-value">Av. Afonso Pena, 1500</span>
+                              <span class="contact-desc">Savassi, Belo Horizonte - MG</span>
+                         </div>
                     </div>
 
                </div>
-
-
           </section>
 
      </main>
 
      <!-- Footer -->
      <footer>
-          <p>&copy; 2025 Silva & Associados - Advocacia | Belo Horizonte, MG</p>
-          <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">
-               Todos os direitos reservados | OAB/MG 12.345 | CNPJ: 12.345.678/0001-90
-          </p>
+          <div class="footer-content">
+               <div class="footer-brand">
+                    <img src="./assets/icons/orangebalance.svg" alt="Silva & Associados" />
+                    <span>Silva & Associados</span>
+               </div>
+               <div class="footer-info">
+                    <p>&copy; 2025 Silva & Associados - Advocacia | Belo Horizonte, MG</p>
+                    <p>OAB/MG 12.345 | CNPJ: 12.345.678/0001-90</p>
+               </div>
+          </div>
      </footer>
 
      <!-- Scroll to Top Button -->
-     <button x-show="showScrollTop" @click="window.scrollTo({top: 0, behavior: 'smooth'})" x-transition
-          class="scroll-top" aria-label="Voltar ao topo">
+     <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
           </svg>
